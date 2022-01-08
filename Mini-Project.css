@@ -1,0 +1,51 @@
+/* 전체 선택자 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /* 간격이 줄어듬 */
+}
+
+body{
+    background-color:darkslateblue;
+}
+
+/* 요소들을 웹 페이지 중앙에 위치시키는 법 */
+.wrap{
+    position:absolute;
+    top:50%; /* 밑으로 50% */
+    left:50%; /* 오른쪽으로 50% */
+    transform:translate(-50%,-50%);
+    text-align:center; /* 가운데 정렬 */
+    color:white;
+}
+
+.material-icons{
+    font-size:10rem;
+}
+
+.lg-text{
+    font-size:2rem;
+    font-weight:bold;
+    margin-bottom:5px; /* 택스트 간격 */
+}
+
+.sm-text{
+    font-size:1.5rem;
+}
+
+#dynamic{
+    position:relative;
+    display:inline-block; /* 텍스트 글자 수가 변경되어도 그에 따라 변경 */
+}
+
+#dynamic::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0%;
+    right:-10px;
+    width:4px;
+    height:100%; /* 높이를 폰트 크기만큼 */
+    background-color:white;
+}

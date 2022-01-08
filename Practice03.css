@@ -1,0 +1,83 @@
+*{
+    font-family:verdana, Geneva, sans-serif;
+    vertical-align: middle;
+}
+
+.wrap{
+    display: inline-flex;
+    position:absolute;
+    top:50%; /* 밑으로 50% */
+    left:50%; /* 오른쪽으로 50% */
+    width:auto;
+    transform:translate(-50%,-50%);
+}
+
+.box{
+    border-style:hidden;
+    padding:20px;
+    width:500px;
+    box-sizing:border-box;
+    background-color:rgba(221, 238, 238, 0.521);
+}
+
+.rightpos{
+    float:right;
+}
+
+.bio{
+    font-size:12px;
+}
+
+.smbox{
+    border-style:solid;
+    padding:4px;
+    width:209px;
+    box-sizing:border-box;
+    border-color:black;
+    border-width:1px;
+    font-size:11px;
+    text-align:center;
+    border-radius:3px;
+}
+
+.tinybox{
+    border-style:solid;
+    padding:4px;
+    width:30px;
+    box-sizing:border-box;
+    border-color:black;
+    border-width:1px;
+    font-size:11px;
+    text-align:center;
+    border-radius:3px;
+}
+
+.highlight{
+    margin-top:15px;
+    width:60px;
+    border-radius:50%;
+    border-width:1px;
+    border-style:double;
+}
+
+.postbox{
+    border-style:hidden;
+    padding:10px;
+    width:149px;
+    box-sizing:border-box;
+    text-align:center;
+    font-size:25px;
+    margin-top:5px;
+    /* background-color:rgba(54, 85, 85, 0.521); */
+}
+
+.postbox1{
+    width:153px;
+    height:153px;
+    border-style:solid;
+    border-width:1px;
+    box-sizing:border-box;
+    margin: 0px;
+    padding: 0px;
+    float:left ;
+}

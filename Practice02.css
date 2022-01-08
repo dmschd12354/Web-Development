@@ -1,0 +1,43 @@
+*{
+    font-family:verdana, Geneva, sans-serif;
+}
+
+.wrap{
+    display: inline-flex;
+    position:absolute;
+    top:50%; /* 밑으로 50% */
+    left:50%; /* 오른쪽으로 50% */
+    width:auto;
+    transform:translate(-50%,-50%);
+}
+
+.content{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.title{
+    font-size: 22px;
+}
+
+.name{
+    font-size: 12px;
+}
+
+.img{
+    vertical-align: middle;
+    border-radius: 70%;
+}
+
+.detail{
+    float:right; /* 우측으로 밀리 */
+}
+
+.card{
+    border-style:hidden;
+    padding:20px;
+    width:300px;
+    box-sizing:border-box;
+    background-color:rgba(221, 238, 238, 0.521);
+    margin-right:50px;
+}

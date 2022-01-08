@@ -1,0 +1,28 @@
+*{
+    font-family:source-sans-pro, sans-serif;
+}
+
+body{
+    height:100vh; /* 화면에 맞는 꽉 찬 사이즈로 자동 변경 */
+    background-image:url(Image/background.jpeg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.wrap{
+    position:absolute;
+    top:50%; /* 밑으로 50% */
+    left:50%; /* 오른쪽으로 50% */
+    width:auto;
+    transform:translate(-50%,-50%);
+    color:black;
+}
+
+.profil{
+    width:150px;
+    border-radius:50%;
+    border-style: double;
+    border-width:10px;
+    border-color:#cce5ee;
+    opacity:0.7;
+}

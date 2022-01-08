@@ -1,0 +1,190 @@
+<!--
+    태그 종류
+    1. 콘텐츠가 있는 태그
+        <open tag>콘텐츠</close tag>    open tag == close tag
+        ex) <div>, <p>, <span>
+    2. 콘텐츠가 없는 태그
+        <tag>
+        ex) <br>, <img>, <meta>
+-->
+
+<!DOCTYPE html> <!-- html 버전 -->
+<html lang="ko"> <!-- html 시작을 의미 -->
+<!-- 
+<태그명 속성="속성값"> 
+속성 예시: lang, charset, name, content, href, target, src, alt, ...
+<html lang="ko"> - html 문서의 주력 언어 정보 = korean  
+-->
+    <head> <!-- html 문서의 정보를 작성하는 영역 = 사용자에게 노출 X -->
+        <meta charset="UTF-8"> <!-- 문서의 인코딩을 결정해주는 character set 설정-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Basics</title> <!-- 문서의 제목 = 웹 브라우저에 표시되는 탭의 텍스트 -->
+        <link href="Basic.css" rel="stylesheet">
+    </head>
+
+    <body> <!-- 웹 브라우저에 표시되는 영역 -->
+       
+        <!-- h(n) 태그  -->
+        <!-- <h1> - Largest / <h6> - Smallest -->
+        <!-- *** 주의사항 *** -->
+        <!-- 1. <h1> 태그는 한 번만 사용 -->
+        <!-- 2. <h1> 태그부터 순차적으로 사용 -->
+        <h1>h1 Tag</h1>
+        <h2>h1 Tag</h2>
+        <h3>h1 Tag</h3>
+        <h4>h1 Tag</h4>
+        <h5>h1 Tag</h5>
+        <h6>h1 Tag</h6>
+
+        <!-- ========================================================== -->
+
+        <!-- p 태그 (paragraph)-->
+        <!-- 가로 한 줄에 모두 출력되지 못하면 자동으로 줄바꿈해서 출력됨 -->
+        <!-- 공백은 한 칸만 출력됨 (코드에서 많이 띄어도 웹 브라우저에서는 한 칸만 띄어짐) (&nbsp; - 공백 -> &nbsp; &nbsp; &nbsp; - 3칸 공백) -->
+
+        <!-- br 태그 (줄바꿈)-->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, doloremque? Quam molestiae rerum perferendis alias tempora culpa tempore magni adipisci consequuntur maxime consequatur labore doloribus fugit eum, molestias quae quaerat!</p>
+        <p>Lorem &nbsp; &nbsp; &nbsp; ipsum dolor sit amet consectetur, adipisicing elit. <br>Suscipit omnis asperiores cupiditate sequi voluptates quis tenetur assumenda neque id. Tempora nam asperiores provident omnis quis dolorem saepe dignissimos. Fugit, eaque!</p>    
+
+        <!-- ========================================================== -->
+
+        <!-- a 태그 (링크)(anchor) -->
+        <!-- 웹 페이지에서 링크를 연결할 때 사용 -->
+        <!-- ----- 내부 링크 방법 ----- -->
+        <!-- one이라는 링크를 클릭하면 one이라는 id 값을 가지고 있는 요소로 이동 -->
+        <!-- 사용 예: 위키백과 목차 -->
+        <a href="#one">Go to one</a>
+        <a href="#two">Go to two</a>
+        <p id="one" style="margin-top: 300px;">one</p>
+        <p id="two" style="margin-top: 500px;">two</p>
+        <p style="margin-top:800px"></p>
+        <!-- ----- 외부 링크 방법 ----- -->
+        <!-- target="blank" - 새 탭에서 열린다 -->
+        <a href="https:www.google.com" target="blank">Go to GOOGLE</a>
+
+        <!-- ========================================================== --><br>
+
+        <!-- img 태그 (image) -->
+        <!-- ----- 내부 리소스 이미지 방법 ----- -->
+        <!-- 파일 경로 기준: html 문서 위치 -->
+        <img src="Image/kakao.png">
+        <!-- 이미지가 깨져서 출력됐을 때 -->
+        <!-- alt = 대체 텍스트를 적는 것 -->
+        <img src="~/Image/kakao.png" alt="kakao image">
+        <!-- 이미지 크기 설정 -->
+        <img src="Image/kakao.png" width="100">
+        <img src="Image/kakao.png" width="2%">
+        <br>
+        <!-- ----- 외부 리소스 이미지 방법 ----- -->
+        <a href="https://www.google.com" target="blank">
+        <img src="https://www.google.de/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" width="200">
+        </a>
+
+        <!-- ========================================================== -->
+        
+        <!-- Exersize -->
+        <h1>우산</h1>
+        <p>이슬비 내리는 이른 아침에<br>우산 셋이 나란히 걸어갑니다.</p>
+        <P>파란우산 검정우산<br>줍다가 학교길에 우산 세개가</P>
+        <img src="Image/umbrella.jpeg" alt="Umbrella image" width="150">
+
+        <!-- ========================================================== -->
+
+        <!-- strong 태그 (html 문법적으로 중요한 텍스트)(굴게) -->
+        <!-- em xorm (html 문법적인 강조 텍스트)(기울게) -->
+        <!-- strong 안에 em 사용 가능 -->
+        <!-- em 안에 strong 사용 가능 -->
+        <!-- strong, em 각자 두번 중첩 가능 (표시되는 것은 같지만 중요도가 달라짐) -->
+        <p><strong>주의</strong>: 이 놀이기구는 <em>임산부, 노약자, 어린이</em> 탑승 불가.</p>
+
+        <!-- b 태그 (html 문법적으로 중요하다는 의미 X)(굵게) -->
+        <!-- i 태그 (html 문법적인 강조 의미 X)(기울게) -->
+        <p><b>주의</b>: 이 놀이기구는 <i>임산부, 노약자, 어린이</i> 탑승 불가.</p>
+
+        <!-- ========================================================== -->
+
+        <!-- ul, ol, dl 태그 (목록 태그) -->
+        <!-- ul = unordered list -->
+        <!-- ol = ordered list -->
+        <!-- dl = definition list -->
+            <!-- dt = definition title / dd = definition data 로 구성-->
+        <ul>
+            <li>공부</li>
+            <li>롤</li>
+        </ul>
+
+        <ol>
+            <li>공부</li>
+            <li>롤</li>
+        </ol>
+        <ol type="A">
+            <li>공부</li>
+            <li>롤</li>
+        </ol>
+
+        <dl>
+            <dt>라면</dt>
+            <dd>한국 라면</dd>
+            <dt>파스타</dt>
+            <dd>이탈리아 파스타</dd></ddd>
+        </dl>
+
+        <!-- ========================================================== -->
+
+        <!-- Input 태그 -->
+        <input class="input" type="text">
+        <!-- button 태그 -->
+        <div>
+            <button class="button">버튼1</button>
+        </div>
+        <div>
+            <button class="button">버튼2</button>
+        </div>
+        <!-- div는 여러개의 태그를 구역으로 묶거나 나눌 때 사용함 (같은 div안에 있으면 같은 줄에)-->
+
+        <!-- ========================================================== -->
+
+        <!-- table 태그 -->
+        <table border="1" summary="테이블" style="width:200px; height:100px;">
+            <caption>테이블 이름</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>은총</td>
+                <td>22</td>
+                <td>서울</td>
+
+        </table>
+
+        <!-- ========================================================== -->
+
+        <!-- form 태그 -->
+        <!-- 로그인같은 특정 정보들을 묶어서 하나의 form으로 제출해야할 때 사용 -->
+        <form>
+            텍스트: <input type="text"> <br>
+            이메일: <input type="email"> <br> <!-- type="email" - 입력값이 이메일 형식으로 지정 -->
+            비밀번호: <input type="password"> <br> <!-- type="password" - 입력값이 비밀번호 형식으로 지정 -->
+            생년월일: <input type="date"> <br>
+            동의: <input type="checkbox">체크박스
+            <div>
+                <button type="submit">완료</button> <!-- type="submit" - 이 버튼을 눌렀을 때 위의 지정 형식들을 만족하는지 체크 -->
+            </div>
+        </form>
+
+        <!-- ========================================================== --> <br>
+
+        <!-- select 태그 (항목 선택) -->
+        <select name="coffee">
+            <option value="1">아메리카노</option>
+            <option value="2">라떼</option>
+            <option value="3">에스프레소</option>
+        </select>
+
+
+
+    </body>
+
+</html>

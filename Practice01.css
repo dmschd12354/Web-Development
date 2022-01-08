@@ -1,0 +1,53 @@
+*{
+    font-family:verdana, Geneva, sans-serif;
+}
+
+body{
+    background-color:rgb(215, 212, 236);
+}
+
+.name{
+    color:rgb(236, 232, 205); 
+    text-align:center;
+}
+
+.job{
+    font-size:15px;
+    color:rgb(151, 150, 150);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.wrap{
+    position:absolute;
+    top:50%; /* 밑으로 50% */
+    left:50%; /* 오른쪽으로 50% */
+    width:auto;
+    transform:translate(-50%,-50%);
+    color:black;
+}
+
+.contact{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:rgba(150, 147, 134, 0.747)
+}
+
+.box{
+    border-style:ridge;
+    border-width:2px;
+    padding:5px;
+    width:300px;
+    box-sizing:border-box;
+    background-color:rgba(240, 255, 255, 0.267);
+}
+
+.list{
+    font-size:13px;
+    color:rgba(90, 89, 87, 0.849);
+}
+
+.material-icons{
+    font-size:13px;
+}

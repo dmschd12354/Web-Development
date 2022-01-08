@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <!-- css = Cascading StyleSheets -->
+    <!-- html 태그에 스타일을 지정할 때 사용하는 언어 -->
+    <!-- css 기본 문법 -->
+    <!-- 
+    선택자{속성:속성값;}
+    - 선택자: 스타일링하고 싶은 html태그를 선택하는 영역 (ex. p태그) (어떤 태그에 css 속성을 부여할 지 선택)
+    - 선언부: 스타일링하고 싶은 속성과 값을 작성하는 영역 (ex. {color:red;})
+    -->
+
+    <!-- 1. Internal Style Sheet (내부 스타일 시트) --> 
+    <!-- 문서 내부에 css를 직접 작성하는 방법 -->
+    <style>
+        p{color:blue;}
+    </style>
+
+    <!-- 2. External Style Sheet (외부 스타일 시트) -->
+    <!-- 별도의 css 파일과 html를 연결해서 사용하는 방법 -->
+    <link href="css.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <p>HELLO</p>
+    <p>BYE</p>
+    <!-- 3. Inline Style -->
+    <!-- style 속성을 사용해서 css 속성을 작성하는 방법 -->
+    <p style="color:green;">WELCOME</p>
+
+    <!-- 색상 단위 -->
+    <!-- 형식: 태그{color:색상;}-->
+    <!-- 1. 색 이름 (ex. red, green) -->
+    <!-- 2. RGB (ex. rgb(255,0,0)) -->
+    <!-- 3. RGBA (ex. rgba(255,0,0,0.2)) (a = 투명도 1 - 불투명 / 0 - 투명) --> 
+    <!-- 4. #RRGGBB (ex. #FF0000) -->
+    <p style="color:rgb(0,0,255)">Color Test</p>
+    <p style="color:rgba(0,0,255,0.5)">Color Test</p>
+    <p style="color:#FF00FF">Color Test</p>
+
+    <!-- 폰트 크기 -->
+    <!-- 형식: 태그{font-size:크기;} -->
+    <!-- 크기 단위 -->
+    <!-- 1. px (기본 단위) -->
+    <!-- 2. rem (html 태그(기본: 16px)의 폰트 크기를 기준으로 배수에 해당하는 크기를 할당) -->
+        <!-- html의 기본 폰트 사이즈 변경 법: html{font-size:20px;} -->
+    <!-- 3. em (rem과 비슷하지만 기준 태그가 부모 태그임) (즉 부모 태그의 배수) -->
+    <!-- 4. vw (웹 브라우저의 화면 가로 크기와 관련) (웹 브라우저 크기를 임의로 축소시키면 그에 따라 폰트 크기도 변함) -->
+    <!-- 4. vh (웹 브라우저의 화면 세로 크기와 관련) (웹 브라우저 크기를 임의로 축소시키면 그에 따라 폰트 크기도 변함) -->
+    <p style="font-size:25px">px font size Test</p>
+    <p style="font-size:2rem">rem font size Test</p> <!-- 16px * 2(rem) = 32px -->
+    <p style="font-size:2em">em font size Test</p> <!-- 16px(부모태그인 body 태그의 폰트 크기) * 2(em) = 32px -->
+    <p style="font-size:5vw">vw font size Test</p> <!-- 1349px * 0.05(5vw) = 67.45px -->
+    <p style="font-size:5vh">vw font size Test</p> <!-- 770.5px * 0.05(5vw) = 38.525px -->
+
+    <!-- 글꼴 -->
+    <!-- 형식: 태그{font-family:[글꼴],[글꼴유형];} -->
+    <h1 style="font-family:'Times New Roman', Times, serif">Times New Roman</h1> 
+    <!-- serif = generic family (글꼴 유형: 고딕 계열, 명조 계열, 필기체 계열..) -->
+    <!-- generic family를 넣는 이유: 앞에 두개의 폰트를 적용하지 못했을 때 마지막에는 안전하게 적용하기 위함 (generic family는 폰트와 다른 개념이라 어떤 상황에도 적용 가능) -->
+    <!-- Times New Roman 폰트를 적용하지 못하는 상황이면 다음 우선순위로 Times 폰트 그 다음으로 serif 글꼴 유형을 적용 -->
+
+    <!-- 텍스트 굵기 -->
+    <!-- 형식: 태그{font-weight:굵기 단위;} -->
+    <!-- 굵기 단위: 100~900, normal, bold, bolder, lighter -->
+    <!-- 주의 사항: 해당 굵기가 해당 글꼴에서 지원을 해야 적용 가능 -->
+    <p style="font-weight:bold;">Font-weight:bold</p>
+
+    <!-- 줄 간격 -->
+    <!-- 형식: 태그{line-height:크기단위(px) or 배수;} -->
+    <p style="line-height:2;">Line height:1.5</p> <!-- 20px * 2 = 40px (줄간격)-->
+
+    <!-- css 파일에서 특정 속성을 클래스로 작성하면 특정 속성만 필요할 때 그 클래스를 이용할 수 있음 -->
+    <!-- 당연히 link를 통해 external style sheet를 연결해야 함 -->
+    <p class="coloring">class color test</p>
+    <p class="fontsize">class font size test</p>
+
+</body>
+</html>
